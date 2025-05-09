@@ -40,17 +40,40 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-black text-white">
-      <header className="sticky top-0 z-50 glass-dark border-b border-zinc-800">
-        <div className="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
-          <div className="flex items-center mb-4 md:mb-0">
-            <span className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#a78bfa] to-[#22d3ee]">AfriCrypt.space</span>
+      <header style={{
+        position: 'sticky',
+        top: 0,
+        zIndex: 50,
+        backgroundColor: 'rgba(5, 5, 5, 0.8)',
+        backdropFilter: 'blur(8px)',
+        WebkitBackdropFilter: 'blur(8px)',
+        borderBottom: '1px solid rgba(39, 39, 42, 0.5)'
+      }}>
+        <div style={{
+          width: '100%',
+          maxWidth: '1280px',
+          margin: '0 auto',
+          padding: '1rem',
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          alignItems: 'center'
+        }}>
+          <div>
+            <span className="gradient-text" style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>
+              AfriCrypt.space
+            </span>
           </div>
-          <nav className="w-full md:w-auto">
-            <ul className="flex flex-wrap justify-center space-x-3 md:space-x-6">
-              <li className="mb-2 md:mb-0"><a href="#about" className="text-zinc-300 hover:text-white transition">About</a></li>
-              <li className="mb-2 md:mb-0"><a href="#vision" className="text-zinc-300 hover:text-white transition">Vision</a></li>
-              <li className="mb-2 md:mb-0"><a href="#features" className="text-zinc-300 hover:text-white transition">Features</a></li>
-              <li className="mb-2 md:mb-0"><a href="#join" className="px-4 py-2 rounded-full gradient-button font-medium hover:scale-105 transform transition">Join Waitlist</a></li>
+          <nav>
+            <ul style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
+              <li><a href="#about" style={{ color: '#d4d4d8', transition: '0.2s' }}>About</a></li>
+              <li><a href="#vision" style={{ color: '#d4d4d8', transition: '0.2s' }}>Vision</a></li>
+              <li><a href="#features" style={{ color: '#d4d4d8', transition: '0.2s' }}>Features</a></li>
+              <li>
+                <a href="#join" className="btn" style={{ padding: '0.5rem 1rem' }}>
+                  Join Waitlist
+                </a>
+              </li>
             </ul>
           </nav>
         </div>
@@ -58,24 +81,21 @@ export default function Home() {
 
       <main>
         {/* Hero Section */}
-        <section className="py-16 md:py-32 relative overflow-hidden blur-glow">
-          <div className="absolute inset-0 z-0">
-            <div className="absolute inset-0 bg-[url('/images/africa-map-dots.svg')] bg-no-repeat bg-center bg-contain opacity-50"></div>
-          </div>
+        <section className="section">
+          <div className="africa-map"></div>
 
-          {/* Animated background elements */}
-          <div className="absolute -bottom-20 -left-20 w-96 h-96 bg-[#8b5cf6]/20 rounded-full blur-3xl animate-float"></div>
-          <div className="absolute top-10 -right-20 w-96 h-96 bg-[#06b6d4]/20 rounded-full blur-3xl" style={{ animationDelay: '1s', animationDuration: '4s' }}></div>
+          <div className="blur-purple" style={{ top: '20%', right: '10%' }}></div>
+          <div className="blur-cyan" style={{ bottom: '10%', left: '5%' }}></div>
 
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-[#a78bfa] via-[#22d3ee] to-[#a78bfa] animate-float">
+          <div className="container">
+            <div style={{ maxWidth: '1000px', margin: '0 auto', textAlign: 'center' }}>
+              <h1 className="gradient-text animate-float" style={{ fontSize: '3.5rem', fontWeight: 'bold', marginBottom: '1.5rem' }}>
                 Africa&apos;s Premier Crypto Community
               </h1>
-              <p className="text-lg sm:text-xl md:text-2xl text-zinc-300 mb-8 md:mb-12">
+              <p style={{ fontSize: '1.5rem', color: '#d1d5db', marginBottom: '2rem' }}>
                 Connect, learn, and build the future of finance and AI across the continent
               </p>
-              <a href="#join" className="inline-block px-8 py-4 rounded-full gradient-button font-bold text-lg shadow-lg transform transition hover:scale-105">
+              <a href="#join" className="btn">
                 Join the Waitlist
               </a>
             </div>
@@ -83,49 +103,85 @@ export default function Home() {
         </section>
 
         {/* About Section */}
-        <section id="about" className="py-20 bg-black/50 relative overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-[#8b5cf6]/10 rounded-full blur-3xl"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-[#06b6d4]/10 rounded-full blur-3xl"></div>
+        <section id="about" className="section" style={{ backgroundColor: 'rgba(0,0,0,0.3)' }}>
+          <div className="blur-purple" style={{ top: '-100px', right: '-100px' }}></div>
+          <div className="blur-cyan" style={{ bottom: '-100px', left: '-100px' }}></div>
 
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-3xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center gradient-text">Building Africa&apos;s Crypto Future</h2>
+          <div className="container">
+            <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+              <h2 className="gradient-text" style={{ fontSize: '2.5rem', fontWeight: 'bold', marginBottom: '3rem', textAlign: 'center' }}>
+                Building Africa&apos;s Crypto Future
+              </h2>
 
-              <div className="space-y-8">
-                <div className="flex flex-col md:flex-row gap-6 items-start">
-                  <div className="glass p-6 rounded-xl gradient-border flex-1 hover:scale-[1.02] transition-transform duration-300">
-                    <div className="p-2 rounded-full w-14 h-14 flex items-center justify-center blur-glow mb-4" style={{ background: "rgba(139, 92, 246, 0.2)" }}>
-                      <FaUsers className="text-[#a78bfa] text-2xl" />
-                    </div>
-                    <h3 className="text-xl font-bold mb-2">Inclusive Community</h3>
-                    <p className="text-zinc-300">From crypto skeptics to experienced enthusiasts, AfriCrypt.space welcomes everyone on their journey to understanding and utilizing digital assets.</p>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.5rem' }}>
+                <div className="card" style={{ borderRadius: '1rem' }}>
+                  <div style={{
+                    width: '3.5rem',
+                    height: '3.5rem',
+                    borderRadius: '50%',
+                    backgroundColor: 'rgba(139, 92, 246, 0.2)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    marginBottom: '1rem'
+                  }}>
+                    <FaUsers style={{ color: '#a78bfa', fontSize: '1.5rem' }} />
                   </div>
-
-                  <div className="glass p-6 rounded-xl gradient-border flex-1 hover:scale-[1.02] transition-transform duration-300">
-                    <div className="p-2 rounded-full w-14 h-14 flex items-center justify-center blur-glow-cyan mb-4" style={{ background: "rgba(6, 182, 212, 0.2)" }}>
-                      <FaMapMarkerAlt className="text-[#22d3ee] text-2xl" />
-                    </div>
-                    <h3 className="text-xl font-bold mb-2">Pan-African Focus</h3>
-                    <p className="text-zinc-300">Connect with like-minded individuals across the continent, building both digital and physical communities to strengthen Africa&apos;s presence in the global crypto space.</p>
-                  </div>
+                  <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>Inclusive Community</h3>
+                  <p style={{ color: '#d1d5db' }}>From crypto skeptics to experienced enthusiasts, AfriCrypt.space welcomes everyone on their journey to understanding and utilizing digital assets.</p>
                 </div>
 
-                <div className="flex flex-col md:flex-row gap-6 items-start">
-                  <div className="glass p-6 rounded-xl gradient-border flex-1 hover:scale-[1.02] transition-transform duration-300">
-                    <div className="p-2 rounded-full w-14 h-14 flex items-center justify-center blur-glow mb-4" style={{ background: "rgba(139, 92, 246, 0.2)" }}>
-                      <FaLightbulb className="text-[#a78bfa] text-2xl" />
-                    </div>
-                    <h3 className="text-xl font-bold mb-2">Knowledge Exchange</h3>
-                    <p className="text-zinc-300">Access educational resources, engage in forums, and share strategies to navigate the evolving cryptocurrency landscape.</p>
+                <div className="card" style={{ borderRadius: '1rem' }}>
+                  <div style={{
+                    width: '3.5rem',
+                    height: '3.5rem',
+                    borderRadius: '50%',
+                    backgroundColor: 'rgba(6, 182, 212, 0.2)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    marginBottom: '1rem'
+                  }}>
+                    <FaMapMarkerAlt style={{ color: '#22d3ee', fontSize: '1.5rem' }} />
                   </div>
+                  <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>Pan-African Focus</h3>
+                  <p style={{ color: '#d1d5db' }}>Connect with like-minded individuals across the continent, building both digital and physical communities to strengthen Africa&apos;s presence in the global crypto space.</p>
+                </div>
+              </div>
 
-                  <div className="glass p-6 rounded-xl gradient-border flex-1 hover:scale-[1.02] transition-transform duration-300">
-                    <div className="p-2 rounded-full w-14 h-14 flex items-center justify-center blur-glow-cyan mb-4" style={{ background: "rgba(6, 182, 212, 0.2)" }}>
-                      <FaRobot className="text-[#22d3ee] text-2xl" />
-                    </div>
-                    <h3 className="text-xl font-bold mb-2">AI & Crypto Nexus</h3>
-                    <p className="text-zinc-300">Explore the powerful intersection of artificial intelligence and blockchain technology, unlocking new opportunities for innovation across Africa.</p>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.5rem', marginTop: '1.5rem' }}>
+                <div className="card" style={{ borderRadius: '1rem' }}>
+                  <div style={{
+                    width: '3.5rem',
+                    height: '3.5rem',
+                    borderRadius: '50%',
+                    backgroundColor: 'rgba(139, 92, 246, 0.2)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    marginBottom: '1rem'
+                  }}>
+                    <FaLightbulb style={{ color: '#a78bfa', fontSize: '1.5rem' }} />
                   </div>
+                  <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>Knowledge Exchange</h3>
+                  <p style={{ color: '#d1d5db' }}>Access educational resources, engage in forums, and share strategies to navigate the evolving cryptocurrency landscape.</p>
+                </div>
+
+                <div className="card" style={{ borderRadius: '1rem' }}>
+                  <div style={{
+                    width: '3.5rem',
+                    height: '3.5rem',
+                    borderRadius: '50%',
+                    backgroundColor: 'rgba(6, 182, 212, 0.2)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    marginBottom: '1rem'
+                  }}>
+                    <FaRobot style={{ color: '#22d3ee', fontSize: '1.5rem' }} />
+                  </div>
+                  <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>AI & Crypto Nexus</h3>
+                  <p style={{ color: '#d1d5db' }}>Explore the powerful intersection of artificial intelligence and blockchain technology, unlocking new opportunities for innovation across Africa.</p>
                 </div>
               </div>
             </div>
@@ -259,53 +315,70 @@ export default function Home() {
         </section>
 
         {/* Waitlist Section */}
-        <section id="join" className="py-20 relative overflow-hidden">
-          <div className="absolute inset-0 z-0">
-            <div className="absolute -top-40 left-1/4 w-80 h-80 bg-[#8b5cf6]/15 rounded-full blur-3xl"></div>
-            <div className="absolute -bottom-20 right-1/4 w-80 h-80 bg-[#06b6d4]/15 rounded-full blur-3xl"></div>
-          </div>
+        <section id="join" className="section">
+          <div className="blur-purple" style={{ top: '20%', right: '10%' }}></div>
+          <div className="blur-cyan" style={{ bottom: '10%', left: '10%' }}></div>
 
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-xl mx-auto glass gradient-border rounded-xl p-8 shadow-2xl">
-              <h2 className="text-3xl font-bold mb-6 text-center gradient-text">Join the Waitlist</h2>
-              <p className="text-zinc-300 mb-8 text-center">Be among the first to experience AfriCrypt.space when we launch. Sign up now to receive updates and early access.</p>
+          <div className="container">
+            <div style={{ maxWidth: '500px', margin: '0 auto' }}>
+              <div className="card" style={{ padding: '2rem' }}>
+                <h2 className="gradient-text" style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '1rem', textAlign: 'center' }}>
+                  Join the Waitlist
+                </h2>
+                <p style={{ color: '#d1d5db', textAlign: 'center', marginBottom: '2rem' }}>
+                  Be among the first to experience AfriCrypt.space when we launch. Sign up now to receive updates and early access.
+                </p>
 
-              {!submitted ? (
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-zinc-300 mb-2">Email Address</label>
-                    <input
-                      type="email"
-                      id="email"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      className="w-full px-5 py-4 glass border border-zinc-700/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8b5cf6] transition-all"
-                      placeholder="your@email.com"
-                      required
-                    />
+                {!submitted ? (
+                  <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+                    <div>
+                      <label htmlFor="email" style={{ display: 'block', fontSize: '0.875rem', fontWeight: '500', color: '#d1d5db', marginBottom: '0.5rem' }}>
+                        Email Address
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        className="input"
+                        placeholder="your@email.com"
+                        required
+                        style={{ padding: '0.75rem 1rem' }}
+                      />
+                    </div>
+
+                    {error && <p style={{ color: '#f87171', fontSize: '0.875rem' }}>{error}</p>}
+
+                    <button
+                      type="submit"
+                      disabled={loading}
+                      className="btn"
+                      style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+                    >
+                      {loading ? 'Please wait...' : 'Join Waitlist'}
+                    </button>
+                  </form>
+                ) : (
+                  <div style={{ textAlign: 'center', padding: '1.5rem 0' }}>
+                    <div style={{
+                      width: '5rem',
+                      height: '5rem',
+                      borderRadius: '9999px',
+                      background: 'linear-gradient(to right, #8b5cf6, #06b6d4)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      margin: '0 auto 1.5rem auto'
+                    }}>
+                      <svg style={{ width: '2.5rem', height: '2.5rem', color: 'white' }} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                      </svg>
+                    </div>
+                    <h3 className="gradient-text" style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '1rem' }}>Thank You!</h3>
+                    <p style={{ color: '#d1d5db' }}>{successMessage || "You've been added to our waitlist. We'll notify you when AfriCrypt.space is ready to launch."}</p>
                   </div>
-
-                  {error && <p className="text-[#f87171] text-sm">{error}</p>}
-
-                  <button
-                    type="submit"
-                    disabled={loading}
-                    className="w-full px-4 py-4 gradient-button font-medium rounded-lg transition-all hover:scale-[1.02] flex items-center justify-center"
-                  >
-                    {loading ? 'Please wait...' : 'Join Waitlist'}
-                  </button>
-                </form>
-              ) : (
-                <div className="text-center py-8 blur-glow">
-                  <div className="w-20 h-20 rounded-full gradient-button flex items-center justify-center mx-auto mb-6">
-                    <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                    </svg>
-                  </div>
-                  <h3 className="text-2xl font-bold mb-4 gradient-text">Thank You!</h3>
-                  <p className="text-zinc-300">{successMessage || "You've been added to our waitlist. We'll notify you when AfriCrypt.space is ready to launch."}</p>
-                </div>
-              )}
+                )}
+              </div>
             </div>
           </div>
         </section>
