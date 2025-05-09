@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FaBitcoin, FaEthereum, FaUsers, FaMapMarkerAlt, FaLightbulb, FaRobot, FaHandshake } from 'react-icons/fa';
 
 export default function Home() {
@@ -9,6 +9,25 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Check if window is defined (browser environment)
+    if (typeof window !== 'undefined') {
+      const handleResize = () => {
+        setIsMobile(window.innerWidth < 768);
+      };
+
+      // Set initial value
+      handleResize();
+
+      // Add event listener
+      window.addEventListener('resize', handleResize);
+
+      // Clean up
+      return () => window.removeEventListener('resize', handleResize);
+    }
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -47,30 +66,128 @@ export default function Home() {
         backgroundColor: 'rgba(5, 5, 5, 0.8)',
         backdropFilter: 'blur(8px)',
         WebkitBackdropFilter: 'blur(8px)',
-        borderBottom: '1px solid rgba(39, 39, 42, 0.5)'
+        borderBottom: '1px solid rgba(39, 39, 42, 0.5)',
+        padding: '1rem 0'
       }}>
         <div style={{
           width: '100%',
           maxWidth: '1280px',
           margin: '0 auto',
-          padding: '1rem',
+          padding: '0 1.5rem',
           display: 'flex',
-          flexDirection: 'row',
+          flexDirection: isMobile ? 'column' : 'row',
           justifyContent: 'space-between',
-          alignItems: 'center'
+          alignItems: 'center',
+          gap: isMobile ? '1.5rem' : '0'
         }}>
-          <div>
-            <span className="gradient-text" style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>
+          <div style={{
+            marginBottom: isMobile ? '0.5rem' : '0',
+            textAlign: isMobile ? 'center' : 'left'
+          }}>
+            <span className="gradient-text" style={{
+              fontSize: '1.75rem',
+              fontWeight: 'bold',
+              letterSpacing: '-0.025em'
+            }}>
               AfriCrypt.space
             </span>
           </div>
           <nav>
-            <ul style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
-              <li><a href="#about" style={{ color: '#d4d4d8', transition: '0.2s' }}>About</a></li>
-              <li><a href="#vision" style={{ color: '#d4d4d8', transition: '0.2s' }}>Vision</a></li>
-              <li><a href="#features" style={{ color: '#d4d4d8', transition: '0.2s' }}>Features</a></li>
+            <ul style={{
+              display: 'flex',
+              flexDirection: isMobile ? 'column' : 'row',
+              gap: isMobile ? '0.75rem' : '2rem',
+              alignItems: 'center',
+              justifyContent: 'center',
+              listStyle: 'none',
+              margin: 0,
+              padding: 0
+            }}>
               <li>
-                <a href="#join" className="btn" style={{ padding: '0.5rem 1rem' }}>
+                <a
+                  href="#about"
+                  style={{
+                    color: '#e2e2e2',
+                    textDecoration: 'none',
+                    fontWeight: '500',
+                    padding: '0.5rem 0.75rem',
+                    borderRadius: '0.25rem',
+                    transition: 'all 0.2s ease',
+                    border: '1px solid transparent'
+                  }}
+                  onMouseOver={(e) => {
+                    e.currentTarget.style.backgroundColor = 'rgba(139, 92, 246, 0.1)';
+                    e.currentTarget.style.border = '1px solid rgba(139, 92, 246, 0.2)';
+                  }}
+                  onMouseOut={(e) => {
+                    e.currentTarget.style.backgroundColor = 'transparent';
+                    e.currentTarget.style.border = '1px solid transparent';
+                  }}
+                >
+                  About
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#vision"
+                  style={{
+                    color: '#e2e2e2',
+                    textDecoration: 'none',
+                    fontWeight: '500',
+                    padding: '0.5rem 0.75rem',
+                    borderRadius: '0.25rem',
+                    transition: 'all 0.2s ease',
+                    border: '1px solid transparent'
+                  }}
+                  onMouseOver={(e) => {
+                    e.currentTarget.style.backgroundColor = 'rgba(139, 92, 246, 0.1)';
+                    e.currentTarget.style.border = '1px solid rgba(139, 92, 246, 0.2)';
+                  }}
+                  onMouseOut={(e) => {
+                    e.currentTarget.style.backgroundColor = 'transparent';
+                    e.currentTarget.style.border = '1px solid transparent';
+                  }}
+                >
+                  Vision
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#features"
+                  style={{
+                    color: '#e2e2e2',
+                    textDecoration: 'none',
+                    fontWeight: '500',
+                    padding: '0.5rem 0.75rem',
+                    borderRadius: '0.25rem',
+                    transition: 'all 0.2s ease',
+                    border: '1px solid transparent'
+                  }}
+                  onMouseOver={(e) => {
+                    e.currentTarget.style.backgroundColor = 'rgba(139, 92, 246, 0.1)';
+                    e.currentTarget.style.border = '1px solid rgba(139, 92, 246, 0.2)';
+                  }}
+                  onMouseOut={(e) => {
+                    e.currentTarget.style.backgroundColor = 'transparent';
+                    e.currentTarget.style.border = '1px solid transparent';
+                  }}
+                >
+                  Features
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#join"
+                  className="btn"
+                  style={{
+                    padding: '0.625rem 1.5rem',
+                    textDecoration: 'none',
+                    fontWeight: '600',
+                    boxShadow: '0 4px 12px rgba(139, 92, 246, 0.3)',
+                    border: '1px solid rgba(139, 92, 246, 0.2)',
+                    marginTop: isMobile ? '0.5rem' : 0
+                  }}
+                >
                   Join Waitlist
                 </a>
               </li>
