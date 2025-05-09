@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AfriCrypt.space | Africa's Premier Crypto Community</title>
+  <meta name="description" content="Join Africa's leading crypto community. Connect, learn, and build the future of finance and AI across the continent.">
+  
+  <!-- Tailwind CDN for quick prototyping -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {}
+      }
+    }
+  </script>
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <style>
+    /* Custom styles */
+    .bg-purple-gradient {
+      background: linear-gradient(to right, #a78bfa, #22d3ee);
+    }
+    .text-gradient {
+      background: linear-gradient(to right, #a78bfa, #22d3ee);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .blur-circle {
+      filter: blur(60px);
+      border-radius: 100%;
+    }
+  </style>
+</head>
+<body class="bg-black text-white">
+  <header class="sticky top-0 z-50 bg-black/70 border-b border-zinc-800">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="flex items-center">
+        <span class="text-2xl font-bold text-gradient">AfriCrypt.space</span>
+      </div>
+      <nav>
+        <ul class="flex space-x-6">
+          <li><a href="#about" class="text-zinc-300 hover:text-white transition">About</a></li>
+          <li><a href="#vision" class="text-zinc-300 hover:text-white transition">Vision</a></li>
+          <li><a href="#features" class="text-zinc-300 hover:text-white transition">Features</a></li>
+          <li><a href="#join" class="px-4 py-2 rounded-full bg-purple-gradient text-white font-medium hover:opacity-90 transition">Join Waitlist</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="py-20 md:py-32 relative overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <div class="absolute inset-0 bg-[url('/images/africa-map-dots.svg')] bg-no-repeat bg-center opacity-20"></div>
+      </div>
+      
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-4xl mx-auto text-center">
+          <h1 class="text-4xl md:text-6xl font-bold mb-6 text-gradient">
+            Africa's Premier Crypto Community
+          </h1>
+          <p class="text-xl md:text-2xl text-zinc-300 mb-12">
+            Connect, learn, and build the future of finance and AI across the continent
+          </p>
+          <a href="#join" class="px-8 py-4 rounded-full bg-purple-gradient text-white font-bold text-lg hover:opacity-90 transition shadow-lg">
+            Join the Waitlist
+          </a>
+        </div>
+      </div>
+      
+      <!-- Animated background elements -->
+      <div class="hidden md:block absolute -bottom-10 -left-10 w-72 h-72 bg-purple-500/20 blur-circle"></div>
+      <div class="hidden md:block absolute top-10 -right-10 w-72 h-72 bg-cyan-500/20 blur-circle"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-black/50">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto">
+          <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Building <span class="text-purple-400">Africa's</span> Crypto Future</h2>
+          
+          <div class="space-y-8">
+            <div class="flex flex-col md:flex-row gap-6 items-start">
+              <div class="bg-zinc-800/50 p-6 rounded-xl border border-zinc-700/50 flex-1 hover:border-purple-400/50 transition">
+                <i class="fas fa-users text-purple-400 text-3xl mb-4"></i>
+                <h3 class="text-xl font-bold mb-2">Inclusive Community</h3>
+                <p class="text-zinc-300">From crypto skeptics to experienced enthusiasts, AfriCrypt.space welcomes everyone on their journey to understanding and utilizing digital assets.</p>
+              </div>
+              
+              <div class="bg-zinc-800/50 p-6 rounded-xl border border-zinc-700/50 flex-1 hover:border-cyan-400/50 transition">
+                <i class="fas fa-map-marker-alt text-cyan-400 text-3xl mb-4"></i>
+                <h3 class="text-xl font-bold mb-2">Pan-African Focus</h3>
+                <p class="text-zinc-300">Connect with like-minded individuals across the continent, building both digital and physical communities to strengthen Africa's presence in the global crypto space.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-black/50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center">Platform <span class="text-purple-400">Features</span></h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Feature 1 -->
+          <div class="bg-zinc-800/30 rounded-xl p-6 border border-zinc-700/50 hover:border-purple-400/50 transition">
+            <div class="w-14 h-14 rounded-full bg-purple-900/50 flex items-center justify-center mb-6">
+              <i class="fas fa-comments text-purple-400 text-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Discussion Forums</h3>
+            <p class="text-zinc-300">Engage in thoughtful discussions with crypto enthusiasts across Africa, from beginner questions to advanced trading strategies.</p>
+          </div>
+          
+          <!-- Feature 2 -->
+          <div class="bg-zinc-800/30 rounded-xl p-6 border border-zinc-700/50 hover:border-cyan-400/50 transition">
+            <div class="w-14 h-14 rounded-full bg-cyan-900/50 flex items-center justify-center mb-6">
+              <i class="fas fa-book text-cyan-400 text-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Resource Library</h3>
+            <p class="text-zinc-300">Access curated educational content, guides, and links to trusted exchanges, Web3 platforms, and DeFi services.</p>
+          </div>
+          
+          <!-- Feature 3 -->
+          <div class="bg-zinc-800/30 rounded-xl p-6 border border-zinc-700/50 hover:border-purple-400/50 transition">
+            <div class="w-14 h-14 rounded-full bg-purple-900/50 flex items-center justify-center mb-6">
+              <i class="fas fa-chart-line text-purple-400 text-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Market Data</h3>
+            <p class="text-zinc-300">Stay updated with real-time cryptocurrency prices, market trends, and sentiment analysis through integrated API feeds.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Waitlist Section -->
+    <section id="join" class="py-20">
+      <div class="container mx-auto px-4">
+        <div class="max-w-xl mx-auto bg-zinc-800/30 rounded-xl p-8 border border-zinc-700/50">
+          <h2 class="text-3xl font-bold mb-6 text-center">Join the Waitlist</h2>
+          <p class="text-zinc-300 mb-8 text-center">Be among the first to experience AfriCrypt.space when we launch. Sign up now to receive updates and early access.</p>
+          
+          <form id="waitlistForm" class="space-y-4">
+            <div>
+              <label for="email" class="block text-sm font-medium text-zinc-300 mb-1">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                class="w-full px-4 py-3 bg-zinc-900/50 border border-zinc-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+                placeholder="your@email.com"
+                required
+              />
+            </div>
+            
+            <div id="error" class="text-red-400 text-sm hidden"></div>
+            
+            <button
+              type="submit"
+              id="submitBtn"
+              class="w-full px-4 py-3 bg-purple-gradient text-white font-medium rounded-lg hover:opacity-90 transition flex items-center justify-center"
+            >
+              Join Waitlist
+            </button>
+          </form>
+          
+          <div id="successMessage" class="text-center py-4 hidden">
+            <svg class="w-16 h-16 text-green-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <h3 class="text-xl font-bold mb-2">Thank You!</h3>
+            <p class="text-zinc-300">You've been added to our waitlist. We'll notify you when AfriCrypt.space is ready to launch.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-black/70 border-t border-zinc-800 py-12">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-6 md:mb-0">
+          <span class="text-2xl font-bold text-gradient">AfriCrypt.space</span>
+          <p class="text-zinc-400 mt-2">Africa's Premier Crypto Community</p>
+        </div>
+        
+        <div class="flex space-x-6">
+          <a href="#" class="text-zinc-400 hover:text-white transition">
+            <i class="fab fa-twitter text-xl"></i>
+            <span class="sr-only">Twitter</span>
+          </a>
+
+          <a href="#" class="text-zinc-400 hover:text-white transition">
+            <i class="fab fa-github text-xl"></i>
+            <span class="sr-only">GitHub</span>
+          </a>
+
+          <a href="#" class="text-zinc-400 hover:text-white transition">
+            <i class="fab fa-discord text-xl"></i>
+            <span class="sr-only">Discord</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Simple form handling
+    document.getElementById('waitlistForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const email = document.getElementById('email').value;
+      const submitBtn = document.getElementById('submitBtn');
+      const errorDiv = document.getElementById('error');
+      const form = document.getElementById('waitlistForm');
+      const successMessage = document.getElementById('successMessage');
+      
+      // Simple validation
+      if (!email || !email.includes('@')) {
+        errorDiv.textContent = 'Please enter a valid email address';
+        errorDiv.classList.remove('hidden');
+        return;
+      }
+      
+      // Disable button and show loading state
+      submitBtn.textContent = 'Please wait...';
+      submitBtn.disabled = true;
+      errorDiv.classList.add('hidden');
+      
+      // Simulate API call
+      setTimeout(() => {
+        // Show success message
+        form.classList.add('hidden');
+        successMessage.classList.remove('hidden');
+        
+        // In a real app, you would send this to your backend
+        console.log('Email submitted:', email);
+      }, 1000);
+    });
+  </script>
+</body>
+</html>
