@@ -66,7 +66,7 @@ export default function Home() {
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-[#a78bfa] via-[#22d3ee] to-[#a78bfa]">
-                Africa's Premier Crypto Community
+                Africa&apos;s Premier Crypto Community
               </h1>
               <p className="text-xl md:text-2xl text-zinc-300 mb-12">
                 Connect, learn, and build the future of finance and AI across the continent
@@ -86,7 +86,7 @@ export default function Home() {
         <section id="about" className="py-20 bg-black/50">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Building <span className="text-[#a78bfa]">Africa's</span> Crypto Future</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Building <span className="text-[#a78bfa]">Africa&apos;s</span> Crypto Future</h2>
               
               <div className="space-y-8">
                 <div className="flex flex-col md:flex-row gap-6 items-start">
@@ -99,7 +99,7 @@ export default function Home() {
                   <div className="bg-zinc-800/50 p-6 rounded-xl border border-zinc-700/50 flex-1 hover:border-[#22d3ee]/50 transition">
                     <FaMapMarkerAlt className="text-[#22d3ee] text-3xl mb-4" />
                     <h3 className="text-xl font-bold mb-2">Pan-African Focus</h3>
-                    <p className="text-zinc-300">Connect with like-minded individuals across the continent, building both digital and physical communities to strengthen Africa's presence in the global crypto space.</p>
+                    <p className="text-zinc-300">Connect with like-minded individuals across the continent, building both digital and physical communities to strengthen Africa&apos;s presence in the global crypto space.</p>
                   </div>
                 </div>
                 
@@ -129,7 +129,7 @@ export default function Home() {
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Vision for <span className="text-[#22d3ee]">The Crypt</span></h2>
                 
                 <p className="text-lg text-zinc-300 mb-6">
-                  AfriCrypt.space is more than just an online community. We're building a movement to empower Africans through cryptocurrency and blockchain technology.
+                  AfriCrypt.space is more than just an online community. We&apos;re building a movement to empower Africans through cryptocurrency and blockchain technology.
                 </p>
                 
                 <div className="space-y-4 mb-8">
@@ -150,7 +150,7 @@ export default function Home() {
                 </div>
                 
                 <p className="text-lg text-zinc-300">
-                  Our ultimate goal: establishing "The Crypt" - physical hubs in key African cities with access to next-generation computing resources, fostering innovation at the intersection of crypto and AI.
+                  Our ultimate goal: establishing &quot;The Crypt&quot; - physical hubs in key African cities with access to next-generation computing resources, fostering innovation at the intersection of crypto and AI.
                 </p>
               </div>
               
@@ -300,7 +300,7 @@ export default function Home() {
             <div className="max-w-3xl mx-auto space-y-6">
               <div className="bg-zinc-800/30 rounded-xl p-6 border border-zinc-700/50">
                 <h3 className="text-xl font-bold mb-2">When will AfriCrypt.space launch?</h3>
-                <p className="text-zinc-300">We're currently in the development phase and aiming for a beta launch in the coming months. Join our waitlist to be the first to know!</p>
+                <p className="text-zinc-300">We&apos;re currently in the development phase and aiming for a beta launch in the coming months. Join our waitlist to be the first to know!</p>
               </div>
               
               <div className="bg-zinc-800/30 rounded-xl p-6 border border-zinc-700/50">
@@ -310,11 +310,11 @@ export default function Home() {
               
               <div className="bg-zinc-800/30 rounded-xl p-6 border border-zinc-700/50">
                 <h3 className="text-xl font-bold mb-2">How will physical meetups work?</h3>
-                <p className="text-zinc-300">Our platform will facilitate connections between members in the same geographical areas, making it easy to organize and discover local crypto events. In the future, we plan to establish permanent physical spaces called "The Crypt" in key African cities.</p>
+                <p className="text-zinc-300">Our platform will facilitate connections between members in the same geographical areas, making it easy to organize and discover local crypto events. In the future, we plan to establish permanent physical spaces called &quot;The Crypt&quot; in key African cities.</p>
               </div>
               
               <div className="bg-zinc-800/30 rounded-xl p-6 border border-zinc-700/50">
-                <h3 className="text-xl font-bold mb-2">What's the connection between crypto and AI?</h3>
+                <h3 className="text-xl font-bold mb-2">What&apos;s the connection between crypto and AI?</h3>
                 <p className="text-zinc-300">Both technologies represent frontier innovations that are reshaping our digital future. AfriCrypt.space explores this powerful intersection, with future plans to provide access to advanced computing resources for AI development alongside crypto education.</p>
               </div>
             </div>
@@ -327,7 +327,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-6 md:mb-0">
               <span className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#a78bfa] to-[#22d3ee]">AfriCrypt.space</span>
-              <p className="text-zinc-400 mt-2">Africa's Premier Crypto Community</p>
+              <p className="text-zinc-400 mt-2">Africa&apos;s Premier Crypto Community</p>
             </div>
             
             <div className="flex space-x-6">
