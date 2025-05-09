@@ -40,17 +40,17 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-black text-white">
-      <header className="sticky top-0 z-50 bg-black/70 border-b border-zinc-800">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <div className="flex items-center">
+      <header className="sticky top-0 z-50 bg-black/70 backdrop-blur-sm border-b border-zinc-800">
+        <div className="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
+          <div className="flex items-center mb-4 md:mb-0">
             <span className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#a78bfa] to-[#22d3ee]">AfriCrypt.space</span>
           </div>
-          <nav>
-            <ul className="flex space-x-6">
-              <li><a href="#about" className="text-zinc-300 hover:text-white transition">About</a></li>
-              <li><a href="#vision" className="text-zinc-300 hover:text-white transition">Vision</a></li>
-              <li><a href="#features" className="text-zinc-300 hover:text-white transition">Features</a></li>
-              <li><a href="#join" className="px-4 py-2 rounded-full bg-gradient-to-r from-[#8b5cf6] to-[#06b6d4] text-white font-medium hover:opacity-90 transition">Join Waitlist</a></li>
+          <nav className="w-full md:w-auto">
+            <ul className="flex flex-wrap justify-center space-x-3 md:space-x-6">
+              <li className="mb-2 md:mb-0"><a href="#about" className="text-zinc-300 hover:text-white transition">About</a></li>
+              <li className="mb-2 md:mb-0"><a href="#vision" className="text-zinc-300 hover:text-white transition">Vision</a></li>
+              <li className="mb-2 md:mb-0"><a href="#features" className="text-zinc-300 hover:text-white transition">Features</a></li>
+              <li className="mb-2 md:mb-0"><a href="#join" className="px-4 py-2 rounded-full bg-gradient-to-r from-[#8b5cf6] to-[#06b6d4] text-white font-medium hover:opacity-90 transition">Join Waitlist</a></li>
             </ul>
           </nav>
         </div>
@@ -58,28 +58,28 @@ export default function Home() {
 
       <main>
         {/* Hero Section */}
-        <section className="py-20 md:py-32 relative overflow-hidden">
+        <section className="py-16 md:py-32 relative overflow-hidden">
           <div className="absolute inset-0 z-0">
-            <div className="absolute inset-0 bg-[url('/images/africa-map-dots.svg')] bg-no-repeat bg-center opacity-20"></div>
+            <div className="absolute inset-0 bg-[url('/images/africa-map-dots.svg')] bg-no-repeat bg-center bg-contain opacity-30"></div>
           </div>
-          
+
+          {/* Animated background elements */}
+          <div className="absolute -bottom-10 -left-10 w-72 h-72 bg-[#8b5cf6]/10 rounded-full blur-3xl"></div>
+          <div className="absolute top-10 -right-10 w-72 h-72 bg-[#06b6d4]/10 rounded-full blur-3xl"></div>
+
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-[#a78bfa] via-[#22d3ee] to-[#a78bfa]">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-[#a78bfa] via-[#22d3ee] to-[#a78bfa]">
                 Africa&apos;s Premier Crypto Community
               </h1>
-              <p className="text-xl md:text-2xl text-zinc-300 mb-12">
+              <p className="text-lg sm:text-xl md:text-2xl text-zinc-300 mb-8 md:mb-12">
                 Connect, learn, and build the future of finance and AI across the continent
               </p>
-              <a href="#join" className="px-8 py-4 rounded-full bg-gradient-to-r from-[#8b5cf6] to-[#06b6d4] text-white font-bold text-lg hover:opacity-90 transition shadow-lg">
+              <a href="#join" className="inline-block px-6 py-3 md:px-8 md:py-4 rounded-full gradient-button font-bold text-base md:text-lg shadow-lg">
                 Join the Waitlist
               </a>
             </div>
           </div>
-          
-          {/* Animated background elements */}
-          <div className="hidden md:block absolute -bottom-10 -left-10 w-72 h-72 bg-[#8b5cf6]/20 rounded-full blur-3xl"></div>
-          <div className="hidden md:block absolute top-10 -right-10 w-72 h-72 bg-[#06b6d4]/20 rounded-full blur-3xl"></div>
         </section>
 
         {/* About Section */}
