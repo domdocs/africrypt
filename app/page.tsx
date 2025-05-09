@@ -40,7 +40,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-black text-white">
-      <header className="sticky top-0 z-50 bg-black/70 backdrop-blur-sm border-b border-zinc-800">
+      <header className="sticky top-0 z-50 glass-dark border-b border-zinc-800">
         <div className="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center mb-4 md:mb-0">
             <span className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#a78bfa] to-[#22d3ee]">AfriCrypt.space</span>
@@ -50,7 +50,7 @@ export default function Home() {
               <li className="mb-2 md:mb-0"><a href="#about" className="text-zinc-300 hover:text-white transition">About</a></li>
               <li className="mb-2 md:mb-0"><a href="#vision" className="text-zinc-300 hover:text-white transition">Vision</a></li>
               <li className="mb-2 md:mb-0"><a href="#features" className="text-zinc-300 hover:text-white transition">Features</a></li>
-              <li className="mb-2 md:mb-0"><a href="#join" className="px-4 py-2 rounded-full bg-gradient-to-r from-[#8b5cf6] to-[#06b6d4] text-white font-medium hover:opacity-90 transition">Join Waitlist</a></li>
+              <li className="mb-2 md:mb-0"><a href="#join" className="px-4 py-2 rounded-full gradient-button font-medium hover:scale-105 transform transition">Join Waitlist</a></li>
             </ul>
           </nav>
         </div>
@@ -58,24 +58,24 @@ export default function Home() {
 
       <main>
         {/* Hero Section */}
-        <section className="py-16 md:py-32 relative overflow-hidden">
+        <section className="py-16 md:py-32 relative overflow-hidden blur-glow">
           <div className="absolute inset-0 z-0">
-            <div className="absolute inset-0 bg-[url('/images/africa-map-dots.svg')] bg-no-repeat bg-center bg-contain opacity-30"></div>
+            <div className="absolute inset-0 bg-[url('/images/africa-map-dots.svg')] bg-no-repeat bg-center bg-contain opacity-50"></div>
           </div>
 
           {/* Animated background elements */}
-          <div className="absolute -bottom-10 -left-10 w-72 h-72 bg-[#8b5cf6]/10 rounded-full blur-3xl"></div>
-          <div className="absolute top-10 -right-10 w-72 h-72 bg-[#06b6d4]/10 rounded-full blur-3xl"></div>
+          <div className="absolute -bottom-20 -left-20 w-96 h-96 bg-[#8b5cf6]/20 rounded-full blur-3xl animate-float"></div>
+          <div className="absolute top-10 -right-20 w-96 h-96 bg-[#06b6d4]/20 rounded-full blur-3xl" style={{ animationDelay: '1s', animationDuration: '4s' }}></div>
 
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-[#a78bfa] via-[#22d3ee] to-[#a78bfa]">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-[#a78bfa] via-[#22d3ee] to-[#a78bfa] animate-float">
                 Africa&apos;s Premier Crypto Community
               </h1>
               <p className="text-lg sm:text-xl md:text-2xl text-zinc-300 mb-8 md:mb-12">
                 Connect, learn, and build the future of finance and AI across the continent
               </p>
-              <a href="#join" className="inline-block px-6 py-3 md:px-8 md:py-4 rounded-full gradient-button font-bold text-base md:text-lg shadow-lg">
+              <a href="#join" className="inline-block px-8 py-4 rounded-full gradient-button font-bold text-lg shadow-lg transform transition hover:scale-105">
                 Join the Waitlist
               </a>
             </div>
@@ -83,35 +83,46 @@ export default function Home() {
         </section>
 
         {/* About Section */}
-        <section id="about" className="py-20 bg-black/50">
-          <div className="container mx-auto px-4">
+        <section id="about" className="py-20 bg-black/50 relative overflow-hidden">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-[#8b5cf6]/10 rounded-full blur-3xl"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-[#06b6d4]/10 rounded-full blur-3xl"></div>
+
+          <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Building <span className="text-[#a78bfa]">Africa&apos;s</span> Crypto Future</h2>
-              
+              <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center gradient-text">Building Africa&apos;s Crypto Future</h2>
+
               <div className="space-y-8">
                 <div className="flex flex-col md:flex-row gap-6 items-start">
-                  <div className="bg-zinc-800/50 p-6 rounded-xl border border-zinc-700/50 flex-1 hover:border-[#a78bfa]/50 transition">
-                    <FaUsers className="text-[#a78bfa] text-3xl mb-4" />
+                  <div className="glass p-6 rounded-xl gradient-border flex-1 hover:scale-[1.02] transition-transform duration-300">
+                    <div className="p-2 rounded-full w-14 h-14 flex items-center justify-center blur-glow mb-4" style={{ background: "rgba(139, 92, 246, 0.2)" }}>
+                      <FaUsers className="text-[#a78bfa] text-2xl" />
+                    </div>
                     <h3 className="text-xl font-bold mb-2">Inclusive Community</h3>
                     <p className="text-zinc-300">From crypto skeptics to experienced enthusiasts, AfriCrypt.space welcomes everyone on their journey to understanding and utilizing digital assets.</p>
                   </div>
-                  
-                  <div className="bg-zinc-800/50 p-6 rounded-xl border border-zinc-700/50 flex-1 hover:border-[#22d3ee]/50 transition">
-                    <FaMapMarkerAlt className="text-[#22d3ee] text-3xl mb-4" />
+
+                  <div className="glass p-6 rounded-xl gradient-border flex-1 hover:scale-[1.02] transition-transform duration-300">
+                    <div className="p-2 rounded-full w-14 h-14 flex items-center justify-center blur-glow-cyan mb-4" style={{ background: "rgba(6, 182, 212, 0.2)" }}>
+                      <FaMapMarkerAlt className="text-[#22d3ee] text-2xl" />
+                    </div>
                     <h3 className="text-xl font-bold mb-2">Pan-African Focus</h3>
                     <p className="text-zinc-300">Connect with like-minded individuals across the continent, building both digital and physical communities to strengthen Africa&apos;s presence in the global crypto space.</p>
                   </div>
                 </div>
-                
+
                 <div className="flex flex-col md:flex-row gap-6 items-start">
-                  <div className="bg-zinc-800/50 p-6 rounded-xl border border-zinc-700/50 flex-1 hover:border-[#a78bfa]/50 transition">
-                    <FaLightbulb className="text-[#a78bfa] text-3xl mb-4" />
+                  <div className="glass p-6 rounded-xl gradient-border flex-1 hover:scale-[1.02] transition-transform duration-300">
+                    <div className="p-2 rounded-full w-14 h-14 flex items-center justify-center blur-glow mb-4" style={{ background: "rgba(139, 92, 246, 0.2)" }}>
+                      <FaLightbulb className="text-[#a78bfa] text-2xl" />
+                    </div>
                     <h3 className="text-xl font-bold mb-2">Knowledge Exchange</h3>
                     <p className="text-zinc-300">Access educational resources, engage in forums, and share strategies to navigate the evolving cryptocurrency landscape.</p>
                   </div>
-                  
-                  <div className="bg-zinc-800/50 p-6 rounded-xl border border-zinc-700/50 flex-1 hover:border-[#22d3ee]/50 transition">
-                    <FaRobot className="text-[#22d3ee] text-3xl mb-4" />
+
+                  <div className="glass p-6 rounded-xl gradient-border flex-1 hover:scale-[1.02] transition-transform duration-300">
+                    <div className="p-2 rounded-full w-14 h-14 flex items-center justify-center blur-glow-cyan mb-4" style={{ background: "rgba(6, 182, 212, 0.2)" }}>
+                      <FaRobot className="text-[#22d3ee] text-2xl" />
+                    </div>
                     <h3 className="text-xl font-bold mb-2">AI & Crypto Nexus</h3>
                     <p className="text-zinc-300">Explore the powerful intersection of artificial intelligence and blockchain technology, unlocking new opportunities for innovation across Africa.</p>
                   </div>
@@ -248,43 +259,50 @@ export default function Home() {
         </section>
 
         {/* Waitlist Section */}
-        <section id="join" className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="max-w-xl mx-auto bg-zinc-800/30 rounded-xl p-8 border border-zinc-700/50">
-              <h2 className="text-3xl font-bold mb-6 text-center">Join the Waitlist</h2>
+        <section id="join" className="py-20 relative overflow-hidden">
+          <div className="absolute inset-0 z-0">
+            <div className="absolute -top-40 left-1/4 w-80 h-80 bg-[#8b5cf6]/15 rounded-full blur-3xl"></div>
+            <div className="absolute -bottom-20 right-1/4 w-80 h-80 bg-[#06b6d4]/15 rounded-full blur-3xl"></div>
+          </div>
+
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="max-w-xl mx-auto glass gradient-border rounded-xl p-8 shadow-2xl">
+              <h2 className="text-3xl font-bold mb-6 text-center gradient-text">Join the Waitlist</h2>
               <p className="text-zinc-300 mb-8 text-center">Be among the first to experience AfriCrypt.space when we launch. Sign up now to receive updates and early access.</p>
-              
+
               {!submitted ? (
-                <form onSubmit={handleSubmit} className="space-y-4">
+                <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-zinc-300 mb-1">Email Address</label>
+                    <label htmlFor="email" className="block text-sm font-medium text-zinc-300 mb-2">Email Address</label>
                     <input
                       type="email"
                       id="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="w-full px-4 py-3 bg-zinc-900/50 border border-zinc-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8b5cf6]"
+                      className="w-full px-5 py-4 glass border border-zinc-700/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8b5cf6] transition-all"
                       placeholder="your@email.com"
                       required
                     />
                   </div>
-                  
+
                   {error && <p className="text-[#f87171] text-sm">{error}</p>}
-                  
+
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full px-4 py-3 bg-gradient-to-r from-[#8b5cf6] to-[#06b6d4] text-white font-medium rounded-lg hover:opacity-90 transition flex items-center justify-center"
+                    className="w-full px-4 py-4 gradient-button font-medium rounded-lg transition-all hover:scale-[1.02] flex items-center justify-center"
                   >
                     {loading ? 'Please wait...' : 'Join Waitlist'}
                   </button>
                 </form>
               ) : (
-                <div className="text-center py-4">
-                  <svg className="w-16 h-16 text-[#4ade80] mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                  </svg>
-                  <h3 className="text-xl font-bold mb-2">Thank You!</h3>
+                <div className="text-center py-8 blur-glow">
+                  <div className="w-20 h-20 rounded-full gradient-button flex items-center justify-center mx-auto mb-6">
+                    <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4 gradient-text">Thank You!</h3>
                   <p className="text-zinc-300">{successMessage || "You've been added to our waitlist. We'll notify you when AfriCrypt.space is ready to launch."}</p>
                 </div>
               )}
